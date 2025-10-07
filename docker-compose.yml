@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  notif_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: notif-app
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - ./logs:/var/log  # Pour accéder aux logs depuis l'hôte

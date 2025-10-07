@@ -1,0 +1,4 @@
+# Run the script every day at 12:00 PM
+0 12 * * * cd /app && /usr/local/bin/python main.py >> /var/log/notif-show.log 2>&1
+
+# Empty line required at the end of cron file
